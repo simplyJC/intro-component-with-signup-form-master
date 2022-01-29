@@ -1,0 +1,8 @@
+@use 'fonts' as *;
+@use '../abstracts/' as *;
+
+.text-bold{
+    font-family: $font-primary;
+    font-weight: bold;
+    color: white;
+}

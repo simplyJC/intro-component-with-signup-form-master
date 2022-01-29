@@ -1,0 +1,181 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+body {
+  background: url('/images/bg-mobile.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: $font-primary;
+  @include media-query(large) {
+    background: url('/images/bg-desktop.png'), $very-dark-blue;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 50%;
+  }
+}
+//main
+.card {
+  padding: 1rem;
+  @include media-query(large) {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  //Card Top
+  &__top {
+    margin-bottom: 1rem;
+    padding: 1rem 4rem 1rem 1rem;
+    background: $dark-blue;
+    border-radius: 1rem 6rem 1rem 1rem;
+    @include media-query(large) {
+      margin-bottom: 0;
+      padding-right: 8rem;
+    }
+  }
+  &__logo {
+    padding: 1rem;
+  }
+  &__icons-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  &__icons {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background: $very-dark-blue;
+    border-radius: 10px;
+
+    & img {
+      padding: 1rem;
+
+      display: flex;
+      justify-self: center;
+      align-items: center;
+    }
+  }
+  //Card Bottom Part
+  &__bottom {
+    padding: 1rem 1rem 0 1rem;
+    background: $dark-blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    @include media-query(large) {
+      height: 150px;
+      width: 600px;
+      padding: 1rem 1rem 2rem 1rem;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__body-desc {
+    width: 100%;
+    text-align: center;
+  }
+  &__body-desc h1 {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $pale-blue;
+  }
+
+  &__range {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+    font-weight: 700;
+    color: $pale-blue;
+  }
+
+  &__data-left {
+    background: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    transform: translateY(20%);
+    @include media-query(large) {
+      transform: translateX(105%) translateY(-250%);
+      width: 170px;
+      ::after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 24px solid transparent;
+        border-right: 12px solid white;
+        border-top: 12px solid transparent;
+        border-bottom: 24px solid transparent;
+        left: 79%;
+        bottom: -30%;
+      }
+    }
+
+    & span:nth-child(1) {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    & span:nth-child(2) {
+      font-weight: bold;
+      font-size: 1rem;
+      color: $grayish-Blue;
+    }
+  }
+}
+
+//Range Slider
+.card__slider {
+  padding-inline: 1rem;
+  width: 100%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: $very-dark-blue;
+  border-radius: 1rem;
+  outline: none;
+  opacity: 0.7;
+ 
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  transition: background 450ms ease-in;
+  border: 4px solid hsl(229, 57%, 11%);
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 4px solid hsl(335, 100%, 65%);
+    box-shadow: 2px 8px 13px -3px hsl(229, 57%, 11%);
+  }
+}
+
+//Footer
+.attribution {
+  padding-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 80%);
+}
