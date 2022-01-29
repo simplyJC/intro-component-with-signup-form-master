@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: $font-primary;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: url('/images/bg-intro-mobile.png'), $primary-red;
+  color: white;
+}
+
+.wrapper {
+  padding: 1rem;
+
+}
+
+
+//Footer
+.attribution {
+  padding-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 80%);
+}

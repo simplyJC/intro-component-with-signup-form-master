@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* ### Primary */
+/* ### Accent */
+/* ### Neutral */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-gray {
+  color: #b9b6d3;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/bg-intro-mobile.png"), #ff7a7a;
+  color: white;
+}
+
+.wrapper {
+  padding: 1rem;
+}
+
+.attribution {
+  padding-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #b5bee3;
+}
+
+.form {
+  padding: 1rem;
+  text-align: center;
+  /* Top */
+  /* Bottom Form */
+}
+.form__top {
+  padding: 1rem 0;
+}
+.form__title {
+  padding: 1rem 0;
+  font-weight: 600;
+}
+.form__bottom {
+  padding: 1rem 0;
+}
+.form__cta {
+  padding: 1rem 0;
+}
+.form__cta-container {
+  background: #6055a5;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+.form__container {
+  padding: 1rem;
+  text-align: left;
+  background: white;
+  color: #3e3c49;
+}
+.form__input {
+  width: 100%;
+  margin: 1rem 0;
+}
+.form__btn {
+  width: 100%;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-style: none;
+  background: #38cc8c;
+  color: white;
+  padding: 1rem 0;
+  border-radius: 0.2rem;
+}
+.form__bottom-text {
+  padding: 1rem 0;
+  text-align: center;
+  color: #b9b6d3;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.form__bottom-text-red {
+  color: #ff7a7a;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */

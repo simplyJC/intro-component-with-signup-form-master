@@ -1,0 +1,61 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.form {
+  padding: 1rem;
+  text-align: center;
+  /* Top */
+  &__top {
+    padding: 1rem 0;
+  }
+  &__title {
+    padding: 1rem 0;
+    font-weight: 600;
+  }
+
+  /* Bottom Form */
+  &__bottom {
+    padding: 1rem 0;
+  }
+  &__cta {
+    padding: 1rem 0;
+    &-container {
+      background: $accent-blue;
+      margin: 1rem 0;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+    }
+  }
+  &__container {
+    padding: 1rem;
+    text-align: left;
+    background: white;
+    color: $neutral-dark-blue;
+  }
+  &__input {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  &__btn {
+    width: 100%;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-style: none;
+    background: $secondary-green;
+    color: white;
+    padding: 1rem 0;
+    border-radius: 0.2rem;
+  }
+  &__bottom-text{
+      padding: 1rem 0; 
+      text-align: center;
+      color: $neutral-grayish-blue;
+      font-size: 0.8rem;
+      font-weight: 500;
+      &-red{
+          color:$primary-red;
+          font-weight: 600;
+      }
+  }
+}
