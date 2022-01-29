@@ -61,12 +61,31 @@ body {
   /* Top */
   /* Bottom Form */
 }
+@media (min-width: 900px) {
+  .form {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+  }
+}
 .form__top {
   padding: 1rem 0;
+}
+@media (min-width: 900px) {
+  .form__top {
+    flex: 1;
+    padding: 0 1rem;
+    text-align: left;
+  }
 }
 .form__title {
   padding: 1rem 0;
   font-weight: 600;
+}
+@media (min-width: 900px) {
+  .form__title {
+    font-size: 2.5rem;
+  }
 }
 .form__bottom {
   padding: 1rem 0;
@@ -76,19 +95,42 @@ body {
 }
 .form__cta-container {
   background: #6055a5;
-  margin: 1rem 0;
+  margin: 2rem 0;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.19);
+}
+@media (min-width: 900px) {
+  .form__cta-container {
+    padding: 0 2rem;
+  }
 }
 .form__container {
   padding: 1rem;
   text-align: left;
   background: white;
   color: #3e3c49;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
 }
 .form__input {
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  font-family: inherit;
+  padding: 1rem 1rem;
+  border: none;
+  border: 1px solid #d7d6e6;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.form__input::-moz-placeholder {
+  opacity: 0.8;
+}
+.form__input:-ms-input-placeholder {
+  opacity: 0.8;
+}
+.form__input::placeholder {
+  opacity: 0.8;
 }
 .form__btn {
   width: 100%;
@@ -100,6 +142,8 @@ body {
   color: white;
   padding: 1rem 0;
   border-radius: 0.2rem;
+  margin-top: 1rem;
+  box-shadow: 0px 5px 0px 0px #2ba671;
 }
 .form__bottom-text {
   padding: 1rem 0;
