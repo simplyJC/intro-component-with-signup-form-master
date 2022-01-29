@@ -155,4 +155,23 @@ body {
 .form__bottom-text-red {
   color: #ff7a7a;
   font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  width: 30px;
+  align-self: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.text-warning {
+  color: #ff7a7a;
+  font-size: 0.8rem;
+  text-align: right;
 }/*# sourceMappingURL=main.css.map */

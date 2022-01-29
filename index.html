@@ -18,6 +18,7 @@
       href="/dist/main.css
   "
     />
+    <script src="/app/js/script.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -38,9 +39,9 @@
               >
             </div>
             <div class="form__container">
-              <form>
+              <form name="myForm" id="myForm">
                
-                <input type="text" name="fname" id="fname" placeholder="First Name" class="form__input"/> <br />
+                <div class="input-container"><input type="text" name="fname" id="fname" placeholder="First Name" class="form__input" value=""/><img src="/images/icon-error.svg" alt=""></div><p class="text-warning">Empty Name</p> <br />
           
                 <input type="text" name="lname" id="lname" placeholder="Last Name" class="form__input"/> <br />
         
@@ -48,7 +49,7 @@
        
                 <input type="password" name="pword" id="pword" placeholder="Password" class="form__input" /><br />
               </form>
-              <button class="form__btn">Claim your free trial</button>
+              <button id="btn" class="form__btn">Claim your free trial</button>
               <p class="form__bottom-text">
                 By clicking the button, you are agreeing to our
                 <span class="form__bottom-text-red">Terms and Services</span>
