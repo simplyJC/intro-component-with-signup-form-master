@@ -3,16 +3,20 @@ const myForm = document.getElementById('myForm');
 const fName = document.getElementById('fname');
 const lName = document.getElementById('lname');
 const password = document.getElementById('password');
+const email = document.getElementById('email');
+//const emailPlaceholder = document.getElementsByName('email')[0];
 
 const errorTextFname = document.getElementById('form__text-warning-fname');
 const errorTextLname = document.getElementById('form__text-warning-lname');
 const errorTextPassword = document.getElementById(
   'form__text-warning-password'
 );
+const errorTextEmail = document.getElementById('form__text-warning-email');
 
 const errorIconFname = document.getElementById('form__error-icon-fname');
 const errorIconLname = document.getElementById('form__error-icon-lname');
 const errorIconPassword = document.getElementById('form__error-icon-password');
+const errorIconEmail = document.getElementById('form__error-icon-email');
 
 myForm.addEventListener('submit', (e) => {
   if (fName.value === '' || fName.value == null) {
@@ -27,6 +31,13 @@ myForm.addEventListener('submit', (e) => {
     e.preventDefault();
     errorTextLname.innerText = 'Last Name cannot be empty';
     lName.classList.add('form__input--warning');
+  }
+
+  if (email.value === '' || email.value == null) {
+    errorIconEmail.classList.add('visible');
+    e.preventDefault();
+    errorTextEmail.innerText = 'Email cannot be empty';
+    email.classList.add('form__input--warning');
   }
 
   if (password.value === '' || password.value == null) {
@@ -58,4 +69,25 @@ if (errorTextPassword.value !== '' || errorTextPassword.value != null) {
     errorTextPassword.innerText = '';
     password.classList.remove('form__input--warning');
   });
+}
+
+if (errorTextEmail.value !== '' || errorTextEmail.value != null) {
+  // email.addEventListener('input', (e) => {
+  //   errorIconEmail.classList.remove('visible');
+  //   errorTextEmail.innerText = '';
+  //   email.classList.remove('form__input--warning');
+  // });
+
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  email.onkeydown = function () {
+    if (!regex.test(email.value)) {
+      //emailPlaceholder.placeholder = 'Invalid Email';
+      errorTextEmail.innerText = 'Looks like this is not an email';
+      console.log(errorTextEmail.value);
+    } else {
+      errorIconEmail.classList.remove('visible');
+      errorTextEmail.innerText = '';
+      email.classList.remove('form__input--warning');
+    }
+  };
 }

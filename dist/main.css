@@ -164,7 +164,7 @@ body {
 }
 
 .form__error-icon-fname, .form__error-icon-lname,
-.form__error-icon-password {
+.form__error-icon-password, .form__error-icon-email {
   max-width: 100%;
   width: 30px;
   align-self: center;
@@ -177,13 +177,13 @@ body {
   position: relative;
 }
 
-.form__text-warning-fname, .form__text-warning-lname, .form__text-warning-password {
+.form__text-warning-fname, .form__text-warning-lname, .form__text-warning-password, .form__error-icon-email {
   color: #ff7a7a;
   font-size: 0.8rem;
   text-align: right;
 }
 
-.form__error-icon-fname, .form__error-icon-lname, .form__error-icon-password {
+.form__error-icon-fname, .form__error-icon-lname, .form__error-icon-password, .form__error-icon-email {
   display: none;
 }
 
