@@ -55,6 +55,7 @@ if (errorTextFname.value !== '' || errorTextFname.value != null) {
     fName.classList.remove('form__input--warning');
   });
 }
+console.log(errorTextLname.value);
 if (errorTextLname.value !== '' || errorTextLname.value != null) {
   lName.addEventListener('input', (e) => {
     errorIconLname.classList.remove('visible');
@@ -70,24 +71,22 @@ if (errorTextPassword.value !== '' || errorTextPassword.value != null) {
     password.classList.remove('form__input--warning');
   });
 }
+console.log(errorTextEmail.value);
 
 if (errorTextEmail.value !== '' || errorTextEmail.value != null) {
-  // email.addEventListener('input', (e) => {
-  //   errorIconEmail.classList.remove('visible');
-  //   errorTextEmail.innerText = '';
-  //   email.classList.remove('form__input--warning');
-  // });
+  email.addEventListener('input', (e) => {
+    errorTextEmail.innerText = '';
 
-  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  email.onkeydown = function () {
-    if (!regex.test(email.value)) {
-      //emailPlaceholder.placeholder = 'Invalid Email';
-      errorTextEmail.innerText = 'Looks like this is not an email';
-      console.log(errorTextEmail.value);
-    } else {
+    const regex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (regex.test(email.value)) {
       errorIconEmail.classList.remove('visible');
       errorTextEmail.innerText = '';
       email.classList.remove('form__input--warning');
+      email.classList.remove('form__input-email');
+    } else {
+      errorTextEmail.innerText = 'Looks like this is not an email';
+      email.classList.add('form__input-email');
     }
-  };
+  });
 }
