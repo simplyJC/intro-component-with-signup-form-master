@@ -39,17 +39,35 @@
               >
             </div>
             <div class="form__container">
-              <form name="myForm" id="myForm">
+              <form name="myForm" id="myForm" action="/" method="get" >
                
-                <div class="input-container"><input type="text" name="fname" id="fname" placeholder="First Name" class="form__input" value=""/><img src="/images/icon-error.svg" alt=""></div><p class="text-warning">Empty Name</p> <br />
+                <div class="form__input-container">
+                  <input type="text" name="fname" id="fname" placeholder="First Name" class="form__input"  />
+                  <img src="/images/icon-error.svg" id="form__error-icon-fname" class="form__error-icon-fname" alt="">
+                  <div id="form__text-warning-fname" class="form__text-warning-fname"></div> 
+                </div>
+                  
           
-                <input type="text" name="lname" id="lname" placeholder="Last Name" class="form__input"/> <br />
+                <div class="form__input-container"><input type="text" name="lname" id="lname" placeholder="Last Name" class="form__input" />
+                  <img src="/images/icon-error.svg" id="form__error-icon-lname" class="form__error-icon-lname" alt="">
+                  <div id="form__text-warning-lname" class="form__text-warning-lname"></div> 
+                </div>
+
+
         
-                <input type="email" name="email" id="email" placeholder="Email Address" class="form__input"/><br />
-       
-                <input type="password" name="pword" id="pword" placeholder="Password" class="form__input" /><br />
+                <input type="email" name="email" id="email" placeholder="Email Address" class="form__input"/>
+
+
+                 
+                 <div class="form__input-container"><input type="password" name="password" id="password" placeholder="Password" class="form__input" />
+                  <img src="/images/icon-error.svg" id="form__error-icon-password" class="form__error-icon-password" alt="">
+                  <div id="form__text-warning-password" class="form__text-warning-password"></div> 
+                </div>
+<!-- 
+                <input type="password" name="pword" id="pword" placeholder="Password" class="form__input" /> -->
+                <button type="submit" id="btn" class="form__btn">Claim your free trial</button>
               </form>
-              <button id="btn" class="form__btn">Claim your free trial</button>
+   
               <p class="form__bottom-text">
                 By clicking the button, you are agreeing to our
                 <span class="form__bottom-text-red">Terms and Services</span>

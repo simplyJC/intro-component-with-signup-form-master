@@ -58,11 +58,18 @@
     font-family: inherit;
     padding: 1rem 1rem;
     border: none;
-    border: 1px solid lighten($neutral-grayish-blue, 10%);
+    /* border: 1px solid lighten($neutral-grayish-blue, 10%); */
+    border-width: 1px;
+    border-color: lighten($neutral-grayish-blue, 10%);
+    border-style: solid;
     border-radius: 3px;
     font-weight: 600;
     &::placeholder {
       opacity: 0.8;
+    }
+    &--warning {
+      border-color: red;
+  
     }
   }
   &__btn {
@@ -91,7 +98,10 @@
   }
 }
 
-img {
+//Form Input Styles
+
+.form__error-icon-fname, .form__error-icon-lname,    
+.form__error-icon-password {
   max-width: 100%;
   width: 30px;
   align-self: center;
@@ -100,12 +110,17 @@ img {
   top: 20px;
   right: 20px;
 }
-.input-container {
+.form__input-container {
   position: relative;
 }
-.text-warning {
+.form__text-warning-fname, .form__text-warning-lname, .form__text-warning-password  {
   color: $primary-red;
   font-size: 0.8rem;
   text-align: right;
-  
+}
+.form__error-icon-fname, .form__error-icon-lname, .form__error-icon-password {
+  display: none;
+}
+.visible {
+  display: block;
 }
