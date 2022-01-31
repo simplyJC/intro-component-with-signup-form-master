@@ -39,6 +39,8 @@ Users should be able to:
 
 - Solution URL: [Click here](https://github.com/simplyJC/intro-component-with-signup-form-master)
 - Live Site URL: [Click here](https://objective-edison-d5f2b5.netlify.app/)
+- 2nd Version base on [WEB CIFAR](https://www.youtube.com/watch?v=HD4qiSU1CBQ&list=LL&index=2&t=2204s), Live Site URL:  [Click Here](https://distracted-hopper-0d1dab.netlify.app/)
+- 2nd Solution URL: [Click Here](https://github.com/simplyJC/intro-component-with-signup-form-master/tree/other-js-code)
 
 ## My Process
 ### Built with
