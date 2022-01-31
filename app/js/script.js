@@ -1,8 +1,6 @@
 const form = document.querySelector('.form__container form');
 const inputs = document.querySelectorAll('.form__container input');
 
-
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   inputs.forEach((input) => {
@@ -26,3 +24,9 @@ function validateEmail(email) {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return emailCheck.test(String(email).toLowerCase());
 }
+
+inputs.forEach((input) => {
+  input.addEventListener('input', () => {
+    input.parentElement.classList.remove('error');
+  });
+});
