@@ -1,6 +1,8 @@
 const form = document.querySelector('.form__container form');
 const inputs = document.querySelectorAll('.form__container input');
 
+
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   inputs.forEach((input) => {

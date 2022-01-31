@@ -150,6 +150,10 @@ body {
   border-radius: 0.2rem;
   margin-top: 1rem;
   box-shadow: 0px 5px 0px 0px #2ba671;
+  cursor: pointer;
+}
+.form__btn:hover {
+  background: #61d6a3;
 }
 .form__bottom-text {
   padding: 1rem 0;
@@ -163,47 +167,12 @@ body {
   font-weight: 600;
 }
 
-/* .form__error-icon-fname,
-.form__error-icon-lname,
-.form__error-icon-password,
-.form__error-icon-email {
-  max-width: 100%;
-  width: 30px;
-  align-self: center;
-
-  position: absolute;
-  top: 20px;
-  right: 20px;
-} */
 .form__input-container {
   position: relative;
 }
 
-/* .form__text-warning-fname,
-.form__text-warning-lname,
-.form__text-warning-password,
-.form__text-warning-email {
-  color: $primary-red;
-  font-size: 0.8rem;
-  text-align: right;
-} */
-/* .form__error-icon-fname,
-.form__error-icon-lname,
-.form__error-icon-password, */
-/* .form__error-icon-email {
-  display: none;
-  display: block;
-}
-.visible {
-  display: block;
-}
-.form__input-email:-webkit-autofill {
-  -webkit-text-fill-color: $primary-red;
-} */
-/* .form__input-email{
-  color: $primary-red;
-} */
-.form__input-container img, .form__input-container p {
+.form__input-container img,
+.form__input-container p {
   display: none;
 }
 
