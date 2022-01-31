@@ -39,33 +39,34 @@
               >
             </div>
             <div class="form__container">
-              <form name="myForm" id="myForm" action="/" method="get" >
+              <form name="form" id="form" action="/" method="get" >
                
                 <div class="form__input-container">
-                  <input type="text" name="fname" id="fname" placeholder="First Name" class="form__input"  />
-                  <img src="/images/icon-error.svg" id="form__error-icon-fname" class="form__error-icon-fname" alt="">
-                  <div id="form__text-warning-fname" class="form__text-warning-fname"></div> 
+                  <input type="text" name="fname"  placeholder="First Name" class="form__input"  />
+                  <img src="/images/icon-error.svg" alt="">
+                  <p>First Name Cannot be Empty</p> 
                 </div>
                   
           
-                <div class="form__input-container"><input type="text" name="lname" id="lname" placeholder="Last Name" class="form__input" />
-                  <img src="/images/icon-error.svg" id="form__error-icon-lname" class="form__error-icon-lname" alt="">
-                  <div id="form__text-warning-lname" class="form__text-warning-lname"></div> 
+                <div class="form__input-container"><input type="text" name="lname" placeholder="Last Name" class="form__input" />
+                  <img src="/images/icon-error.svg" alt="">
+                  <p>Last Name Cannot be Empty</p> 
                 </div>
 
 
                  <div class="form__input-container">
-                   <input type="email" name="email" id="email" placeholder="E-mail" class="form__input " />
-                  <img src="/images/icon-error.svg" id="form__error-icon-email" class="form__error-icon-email" alt="">
-                  <div id="form__text-warning-email" class="form__text-warning-email"></div> 
+                   <input type="email" name="email" placeholder="E-mail" class="form__input " />
+                  <img src="/images/icon-error.svg"  alt="">
+                  <p>Looks like this is not email</p> 
                  </div>
            
 
 
                  
-                 <div class="form__input-container"><input type="password" name="password" id="password" placeholder="Password" class="form__input" />
-                  <img src="/images/icon-error.svg" id="form__error-icon-password" class="form__error-icon-password" alt="">
-                  <div id="form__text-warning-password" class="form__text-warning-password"></div> 
+                 <div class="form__input-container">
+                   <input type="password" name="password" placeholder="Password" class="form__input" />
+                  <img src="/images/icon-error.svg" alt="">
+                  <p>Password Cannot be Empty</p> 
                 </div>
 
                 <button type="submit" id="btn" class="form__btn">Claim your free trial</button>

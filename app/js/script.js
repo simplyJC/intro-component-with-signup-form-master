@@ -1,92 +1,26 @@
-const myForm = document.getElementById('myForm');
+const form = document.querySelector('.form__container form');
+const inputs = document.querySelectorAll('.form__container input');
 
-const fName = document.getElementById('fname');
-const lName = document.getElementById('lname');
-const password = document.getElementById('password');
-const email = document.getElementById('email');
-//const emailPlaceholder = document.getElementsByName('email')[0];
-
-const errorTextFname = document.getElementById('form__text-warning-fname');
-const errorTextLname = document.getElementById('form__text-warning-lname');
-const errorTextPassword = document.getElementById(
-  'form__text-warning-password'
-);
-const errorTextEmail = document.getElementById('form__text-warning-email');
-
-const errorIconFname = document.getElementById('form__error-icon-fname');
-const errorIconLname = document.getElementById('form__error-icon-lname');
-const errorIconPassword = document.getElementById('form__error-icon-password');
-const errorIconEmail = document.getElementById('form__error-icon-email');
-
-myForm.addEventListener('submit', (e) => {
-  if (fName.value === '' || fName.value == null) {
-    errorIconFname.classList.add('visible');
-    e.preventDefault();
-    errorTextFname.innerText = 'First Name cannot be empty';
-    fName.classList.add('form__input--warning');
-  }
-
-  if (lName.value === '' || lName.value == null) {
-    errorIconLname.classList.add('visible');
-    e.preventDefault();
-    errorTextLname.innerText = 'Last Name cannot be empty';
-    lName.classList.add('form__input--warning');
-  }
-
-  if (email.value === '' || email.value == null) {
-    errorIconEmail.classList.add('visible');
-    e.preventDefault();
-    errorTextEmail.innerText = 'Email cannot be empty';
-    email.classList.add('form__input--warning');
-  }
-
-  if (password.value === '' || password.value == null) {
-    errorIconPassword.classList.add('visible');
-    e.preventDefault();
-    errorTextPassword.innerText = 'Password cannot be empty';
-    password.classList.add('form__input--warning');
-  }
-});
-
-if (errorTextFname.value !== '' || errorTextFname.value != null) {
-  fName.addEventListener('input', (e) => {
-    errorIconFname.classList.remove('visible');
-    errorTextFname.innerText = '';
-    fName.classList.remove('form__input--warning');
-  });
-}
-console.log(errorTextLname.value);
-if (errorTextLname.value !== '' || errorTextLname.value != null) {
-  lName.addEventListener('input', (e) => {
-    errorIconLname.classList.remove('visible');
-    errorTextLname.innerText = '';
-    lName.classList.remove('form__input--warning');
-  });
-}
-
-if (errorTextPassword.value !== '' || errorTextPassword.value != null) {
-  password.addEventListener('input', (e) => {
-    errorIconPassword.classList.remove('visible');
-    errorTextPassword.innerText = '';
-    password.classList.remove('form__input--warning');
-  });
-}
-console.log(errorTextEmail.value);
-
-if (errorTextEmail.value !== '' || errorTextEmail.value != null) {
-  email.addEventListener('input', (e) => {
-    errorTextEmail.innerText = '';
-
-    const regex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (regex.test(email.value)) {
-      errorIconEmail.classList.remove('visible');
-      errorTextEmail.innerText = '';
-      email.classList.remove('form__input--warning');
-      email.classList.remove('form__input-email');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  inputs.forEach((input) => {
+    if (!input.value) {
+      input.parentElement.classList.add('error');
     } else {
-      errorTextEmail.innerText = 'Looks like this is not an email';
-      email.classList.add('form__input-email');
+      input.parentElement.classList.remove('error');
+      if (input.type == 'email') {
+        if (validateEmail(input.value)) {
+          input.parentElement.classList.remove('error');
+        } else {
+          input.parentElement.classList.add('error');
+        }
+      }
     }
   });
+});
+
+function validateEmail(email) {
+  let emailCheck =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return emailCheck.test(String(email).toLowerCase());
 }
